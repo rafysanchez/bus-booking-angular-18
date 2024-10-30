@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [AsyncPipe, FormsModule,DatePipe,RouterLink],
   templateUrl: './search.component.html',
-  styleUrl: './search.component.css'
+  styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit{
 

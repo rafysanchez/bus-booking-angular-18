@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [FormsModule],
   templateUrl: './booking.component.html',
-  styleUrl: './booking.component.css'
+  styleUrls: ['./booking.component.css']
 })
 export class BookingComponent {
 
@@ -33,7 +33,7 @@ export class BookingComponent {
       debugger;
       this.scehduielData =  res;
       for (let index = 1; index <= this.scehduielData.totalSeats; index++) {
-        this.seatArray.push(index) 
+        this.seatArray.push(index)
       }
     })
   }
@@ -41,7 +41,7 @@ export class BookingComponent {
   getBookedSeats() {
     this.masterSrv.getBookedSeats(this.scheduleId).subscribe((res:any)=>{
       debugger;
-      this.bookedSeatsArray =  res; 
+      this.bookedSeatsArray =  res;
     })
   }
 
@@ -84,14 +84,14 @@ export class BookingComponent {
         this.masterSrv.onBooking(obj).subscribe((Res:any)=>{
             alert("Booking Success")
         },error=> {
-  
+
         })
-  
+
       } else {
         alert("Please Login ")
       }
     }
-   
-   
+
+
   }
 }
